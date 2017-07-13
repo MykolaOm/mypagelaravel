@@ -37,6 +37,7 @@
             @endsection
         @endif
 @else
+
     @section('content')
         <div class="container">
             <div class="row">
