@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        Go to main page{{--{{ config('app.name', 'Laravel') }}--}}
+                        Main page{{--{{ config('app.name', 'Laravel') }}--}}
                     </a>
                 </div>
 
