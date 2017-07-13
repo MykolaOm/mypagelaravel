@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>My page</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -70,11 +70,11 @@
                 <div class="top-right links">
 
                     @if (Auth::check())
-                        Hello, {{ Auth::user()->name }}!
+                        Hello, {{ Auth::user()->name }},{{ Auth::user()->id }}!
                         <?php $isAdminName = Auth::user()->name == 'admin' ?>
 
                         @if($isAdminName)
-                            <a href="{{ url('/home') }}">Admin panel</a>
+                            <a href="{{ url('/adminpanel') }}">Admin panel</a>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
@@ -97,7 +97,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                   Cool Page
                 </div>
 
                 <div class="links">
