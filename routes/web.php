@@ -19,3 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
+Route::get('/adminmail',function () {
+    $mails = DB::table('mails')->get();
+
+    return view('admins.adminmail',compact('mails'));
+});
+Route::get('/home/{userid}',function ($userid) {
+    $mails = DB::table('mails')->find($userid);
+
+    return view('home',compact('mails'));
+});
