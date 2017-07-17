@@ -19,7 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');//->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index');//->name('adminpanel');
+Route::get('/adminmail','MailController@render_all');
+Route::get('/adminmail/new','MailController@render_new');
+Route::get('/adminmail/old','MailController@render_old');
+
 /*
+
 Route::get('/adminmail',function () {
     $mails = DB::table('mails')->get();
 
