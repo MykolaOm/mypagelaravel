@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');//->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index');//->name('adminpanel');
+Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name('user.activate');
 /*
 Route::get('/adminmail',function () {
     $mails = DB::table('mails')->get();
