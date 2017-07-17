@@ -17,8 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
+Route::get('/home', 'HomeController@index');//->name('home');
+Route::get('/adminpanel', 'AdminpanelController@index');//->name('adminpanel');
+/*
 Route::get('/adminmail',function () {
     $mails = DB::table('mails')->get();
 
@@ -29,3 +30,4 @@ Route::get('/home/{userid}',function ($userid) {
 
     return view('home',compact('mails'));
 });
+*/
