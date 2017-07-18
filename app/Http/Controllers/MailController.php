@@ -65,16 +65,27 @@ class MailController extends Controller
     public function store(Request $request)
     {
         //
+      // dd(  Auth::user()->id);
 
-        dump($request);
-        //dd(request()->all());
-//
-//        $mail = new Mail([
-//            'title' => $request->get('title'),
-//            'text' => $request->get('text')
-//        ]);
-//
+        //dump($request);
+       //dd(request()->all());
+       // $user_id = Auth::user()->id;
+        $mail = new Mail([
+        'title' => $request->get('mailtitle'),
+        'text' => $request->get('mailmessage'),
+        'user_id' => Auth::user()->id
+        ]);
+//        dd($mail);
+        $mail->save();
+        return redirect('home');
+
+////
+//        $mail = new Mail ($request->all());
+//        $mail->user_id = Auth::user()->id;
+//        $mail->'title' => $request->get('mailtitle'),
+//        $mail->'text' => $request->get('mailmessage')
 //        $mail->save();
+
 //        return redirect('home');
     }
 

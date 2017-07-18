@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Auth;
 
 class CreateMailsTable extends Migration
 {
@@ -15,7 +16,7 @@ class CreateMailsTable extends Migration
     {
         Schema::create('mails', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyInteger('user_id');
+            $table->tinyInteger('user_id')//;->default(Auth::user()->id
             $table->string('title');
             $table->text('text');
             $table->tinyInteger('status')->default('0');
