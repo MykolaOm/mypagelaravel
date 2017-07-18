@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Mail;
 
 class MailController extends Controller
 {
@@ -12,35 +13,35 @@ class MailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function render_all()
-    {
-        //
-        $mails = DB::table('mails')->get();
-
-        return view('mails',compact('mails'));
-    }
-    public function old()
-    {
-        //
-        $mails = DB::table('mails')->where('status', '0')->get();
-
-        return view('mails', compact('mails'));
-    }
-    public function new()
-    {
-        //
-        $mails = DB::table('mails')->where('status', '1')->get();
-
-        return view('mails', compact('mails'));
-    }
-    public function current()
-    {
-        //
-        $user_id = Auth::user()->id;
-        $mails = DB::table('mails')->find($user_id);
-
-        return view('mails', compact('mails'));
-    }
+//    public function render_all()
+//    {
+//        //
+//        $mails = DB::table('mails')->get();
+//
+//        return view('mails',compact('mails'));
+//    }
+//    public function old()
+//    {
+//        //
+//        $mails = DB::table('mails')->where('status', '0')->get();
+//
+//        return view('mails', compact('mails'));
+//    }
+//    public function new()
+//    {
+//        //
+//        $mails = DB::table('mails')->where('status', '1')->get();
+//
+//        return view('mails', compact('mails'));
+//    }
+//    public function current()
+//    {
+//        //
+//        $user_id = Auth::user()->id;
+//        $mails = DB::table('mails')->find($user_id);
+//
+//        return view('mails.show', compact('mails'));
+//    }
 
 
 
@@ -52,6 +53,7 @@ class MailController extends Controller
     public function create()
     {
         //
+        return view('mails.create');
     }
 
     /**
@@ -63,6 +65,17 @@ class MailController extends Controller
     public function store(Request $request)
     {
         //
+
+        dump($request);
+        //dd(request()->all());
+//
+//        $mail = new Mail([
+//            'title' => $request->get('title'),
+//            'text' => $request->get('text')
+//        ]);
+//
+//        $mail->save();
+//        return redirect('home');
     }
 
     /**
@@ -76,7 +89,7 @@ class MailController extends Controller
         //
         $mails = DB::table('mails')->where('id', $id);
 
-        return view('mails', compact('mails'));
+        return view('mails{id}', compact('mails'));
     }
 
     /**

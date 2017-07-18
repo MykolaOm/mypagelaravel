@@ -70,7 +70,8 @@
                 <div class="top-right links">
 
                     @if (Auth::check())
-                        Hello, {{ Auth::user()->name }},{{ Auth::user()->id }}!
+                        Hello, {{ Auth::user()->name }}!
+                        {{--,{{ Auth::user()->id }}--}}
                         <?php $isAdminName = Auth::user()->name == 'admin' ?>
 
                         @if($isAdminName)

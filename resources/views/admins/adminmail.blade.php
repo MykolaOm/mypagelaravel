@@ -12,7 +12,7 @@
                     <td>status</td>
                     <td>action</td>
                 </tr>
-                {{--@foreach($mail as $mail)--}}
+                {{--@foreach($mails as $mail)--}}
                 {{--<tr class="info">--}}
                     {{--<td>{{$mail->id}}</td>--}}
                     {{--<td>{{$mail->userid}}</td>--}}
