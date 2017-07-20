@@ -39,7 +39,8 @@ class MailController extends Controller
     {
         //
         $user_id = Auth::user()->id;
-        $mails = DB::table('mails')->find($user_id);
+        //$mails = DB::table('mails')->find($user_id);
+        $mails = DB::table('mails')->where('user_id',$user_id)->get();
 
         return view('mails.show', compact('mails'));
     }

@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');//->name('home');
-Route::get('/adminpanel', 'AdminpanelController@index');//->name('adminpanel');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
 
 //Route::get('/adminmail','MailController@render_all');
 Route::get('/adminmail', function () {
@@ -33,6 +33,7 @@ Route::resource('mail','MailController');
 Route::get('home/render_all','MailController@render_all');
 Route::get('home/old','MailController@old');
 Route::get('home/new','MailController@new');
+Route::get('home/current','MailController@current');
 
 //Route::get('/mail/create', 'MailController@create');
 //Route::get('/mail', 'MailController@show');//
