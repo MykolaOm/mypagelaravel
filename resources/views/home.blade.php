@@ -21,6 +21,9 @@
                     <form method="get" action="/mypage/public/index.php/home/new">
                         <button class="btn btn-primary" type="submit">Answered</button>
                     </form>
+                    <form method="get" action="/mypage/public/index.php/mail/create">
+                        <button class="btn btn-primary" type="submit">create message</button>
+                    </form>
                    {{--<button type="button" formaction="{{ action('MailController@render_all') }}">Click Me!</button>--}}
                     {{--<button class="btn btn-primary" formaction="{{ action('MailController@render_all') }}"> Все письма</button>--}}
                     {{--<button class="btn btn-primary" formaction="{{ action('MailController@old') }}">не отвеченые</button>--}}
