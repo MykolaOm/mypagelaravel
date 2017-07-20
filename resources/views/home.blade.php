@@ -13,7 +13,13 @@
                     {{--</div>--}}
                         {{--</form>--}}
                     <form method="get" action="/mypage/public/index.php/home/render_all">
-                        <button type="submit">To render all</button>
+                        <button class="btn btn-primary" type="submit">To render all</button>
+                    </form>
+                    <form method="get" action="/mypage/public/index.php/home/old">
+                        <button class="btn btn-primary" type="submit">Unanswered</button>
+                    </form>
+                    <form method="get" action="/mypage/public/index.php/home/new">
+                        <button class="btn btn-primary" type="submit">Answered</button>
                     </form>
                    {{--<button type="button" formaction="{{ action('MailController@render_all') }}">Click Me!</button>--}}
                     {{--<button class="btn btn-primary" formaction="{{ action('MailController@render_all') }}"> Все письма</button>--}}

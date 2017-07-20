@@ -31,6 +31,8 @@ Route::get('/adminmail/old','MailController@render_old');
 
 Route::resource('mail','MailController');
 Route::get('home/render_all','MailController@render_all');
+Route::get('home/old','MailController@old');
+Route::get('home/new','MailController@new');
 
 //Route::get('/mail/create', 'MailController@create');
 //Route::get('/mail', 'MailController@show');//
