@@ -14,36 +14,35 @@ class MailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function render_all()
     {
         //
-        $mails = DB::table('mails')->get();
+        $my_id = Auth::user()->id;
+        $mails = DB::table('mails')->where('user_id',$my_id)->get();
 
         return view('mails.show',compact('mails'));
     }
     public function old()
     {
         //
-        $mails = DB::table('mails')->where('status', '0')->get();
+        $my_id = Auth::user()->id;
+
+        $mails = DB::table('mails')->where('status', '0')->where('user_id',$my_id)->get();
+
 
         return view('mails.show', compact('mails'));
     }
     public function new()
     {
         //
-        $mails = DB::table('mails')->where('status', '1')->get();
+        $my_id = Auth::user()->id;
+        $mails = DB::table('mails')->where('status', '1')->where('user_id',$my_id)->get();
 
         return view('mails.show', compact('mails'));
     }
-    public function current()
-    {
-        //
-        $user_id = Auth::user()->id;
-        //$mails = DB::table('mails')->find($user_id);
-        $mails = DB::table('mails')->where('user_id',$user_id)->get();
 
-        return view('mails.show', compact('mails'));
-    }
 
 
 

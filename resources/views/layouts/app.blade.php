@@ -69,7 +69,18 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
+                                        <?php $isAdminName = Auth::user()->name == 'admin' ?>
 
+                                        @if($isAdminName)
+                                        <a href="{{ url('/adminpanel/render_all')}}">
+                                            Show all users
+                                        </a>
+                                        <a href="{{ url('/adminpanel')}}">
+                                            Back to panel
+                                        </a>
+                                        @endif
+                                        {{--onclick="event.preventDefault();--}}
+                                        {{--document.getElementById('logout-form').submit();"--}}
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>

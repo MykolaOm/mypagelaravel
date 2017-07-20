@@ -19,9 +19,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
+Route::get('adminpanel/render_all','AdminpanelController@render_all');
+
+
+Route::get('adminpanel/{id}','AdminpanelController@current');
+
+//Route::get('adminpanel/{id}',function($id) {
+//   // dd($user_id);
+//    $mail = DB::table('mails')->where('user_id',$id)->get();
+//    return view('admins.adminmail',compact('mail'));
+//});
 
 //Route::get('/adminmail','MailController@render_all');
 Route::get('/adminmail', function () {
+
     return view('admins.adminmail');
 });
 
