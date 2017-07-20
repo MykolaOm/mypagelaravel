@@ -6,21 +6,20 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Dashboard</div>
 
-                    <?php   ?>
-                    <?php   $curentUserId = Auth::user()->id;
-                            $mails = DB::table('mails')->(where('user_id','$currentUserId'))->get(); ?>
+                    <?php  // $curentUserId = Auth::user()->id;
+                           // $mails = DB::table('mails')->(where('user_id','$currentUserId'))->get(); ?>
                     <div class="panel-body">
                         <table class="table table-striped">
                             <tr class="success">
                                 <td>id</td>
-                                {{--<td>authorid</td>--}}
+                                <td>authorid</td>
                                 <td>title</td>
                                 <td>text</td>
                             </tr>
                             @foreach($mails as $mail)
                             <tr class="info">
                             <td>{{$mail->id}}</td>
-                            {{--<td>{{$mail->userid}}</td>--}}
+                            <td>{{$mail->user_id}}</td>
                             <td>{{$mail->title}}</td>
                             <td>{{$mail->text}}</td>
 

@@ -7,7 +7,19 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    {{--<form class="form-horizontal" method="GET" action="{{ action('MailController@render_all') }}">--}}
+                    {{--<div class="col-sm-10 col-sm-offset-2">--}}
+                        {{--<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary" >--}}
+                    {{--</div>--}}
+                        {{--</form>--}}
+                    <form method="get" action="/mypage/public/index.php/home/render_all">
+                        <button type="submit">To render all</button>
+                    </form>
+                   {{--<button type="button" formaction="{{ action('MailController@render_all') }}">Click Me!</button>--}}
+                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@render_all') }}"> Все письма</button>--}}
+                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@old') }}">не отвеченые</button>--}}
+                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@new') }}">отвеченые</button>--}}
+                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@current') }}">свои письма</button>--}}
                 </div>
             </div>
         </div>

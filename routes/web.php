@@ -30,6 +30,7 @@ Route::get('/users/new','MailController@render_new');
 Route::get('/adminmail/old','MailController@render_old');
 
 Route::resource('mail','MailController');
+Route::get('home/render_all','MailController@render_all');
 
 //Route::get('/mail/create', 'MailController@create');
 //Route::get('/mail', 'MailController@show');//

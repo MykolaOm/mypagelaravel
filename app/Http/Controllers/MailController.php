@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail;
+use DB;
 
 class MailController extends Controller
 {
@@ -13,35 +14,35 @@ class MailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-//    public function render_all()
-//    {
-//        //
-//        $mails = DB::table('mails')->get();
-//
-//        return view('mails',compact('mails'));
-//    }
-//    public function old()
-//    {
-//        //
-//        $mails = DB::table('mails')->where('status', '0')->get();
-//
-//        return view('mails', compact('mails'));
-//    }
-//    public function new()
-//    {
-//        //
-//        $mails = DB::table('mails')->where('status', '1')->get();
-//
-//        return view('mails', compact('mails'));
-//    }
-//    public function current()
-//    {
-//        //
-//        $user_id = Auth::user()->id;
-//        $mails = DB::table('mails')->find($user_id);
-//
-//        return view('mails.show', compact('mails'));
-//    }
+    public function render_all()
+    {
+        //
+        $mails = DB::table('mails')->get();
+
+        return view('mails.show',compact('mails'));
+    }
+    public function old()
+    {
+        //
+        $mails = DB::table('mails')->where('status', '0')->get();
+
+        return view('mails.show', compact('mails'));
+    }
+    public function new()
+    {
+        //
+        $mails = DB::table('mails')->where('status', '1')->get();
+
+        return view('mails.show', compact('mails'));
+    }
+    public function current()
+    {
+        //
+        $user_id = Auth::user()->id;
+        $mails = DB::table('mails')->find($user_id);
+
+        return view('mails.show', compact('mails'));
+    }
 
 
 
@@ -100,7 +101,7 @@ class MailController extends Controller
         //
         $mails = DB::table('mails')->where('id', $id);
 
-        return view('mails{id}', compact('mails'));
+        return view('mails.show', compact('mails'));
     }
 
     /**
