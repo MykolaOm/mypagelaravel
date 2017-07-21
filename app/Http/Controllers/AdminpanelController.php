@@ -17,9 +17,9 @@ class AdminpanelController extends Controller
 
     public function index()
     {
-        $isAdminName = Auth::user()->name == 'admin';
+//        $isAdminName = Auth::user()->name == 'admin';
         if (Auth::check()){
-//            $isAdminName = Auth::user()->name == 'admin';
+            $isAdminName = Auth::user()->name == 'admin';
             if($isAdminName){
                 return view('admins.adminpanel');
             }
@@ -60,5 +60,28 @@ class AdminpanelController extends Controller
         $mails = DB::table('mails')->get();
 //        ->where('id', $id)
         return view('admins.adminmail', compact('mails'));
+    }
+//    public function current($id)
+//    {
+//        //
+//        $mails = DB::table('mails')->where('id', $id);
+//        //->get()
+//        return view('admins.directusers', compact('mails'));
+//    }
+    public function showusers()
+    {
+        //
+        $mails = DB::table('users')->get();
+//        ->where('id', $id)
+
+        return view('admins.adminmail', compact('mails'));
+    }
+    public function selectuser()
+    {
+        //
+        $users = DB::table('users')->get();
+//        ->where('id', $id)
+
+        return view('admins.allusers', compact('users'));
     }
 }

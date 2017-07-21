@@ -20,12 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
 Route::get('adminpanel/render_all','AdminpanelController@render_all');
-//Route::get('adminpanel/messages','AdminpanelController@show');
 
+Route::get('adminpanel/current/{id}','AdminpanelController@current');
 
-Route::get('adminpanel/{id}','AdminpanelController@current');
+Route::get('adminpanel/allusers','AdminpanelController@selectuser');
 
-Route::get('/adminmail','AdminpanelController@show');
+Route::get('adminpanel/adminmail','AdminpanelController@show');
 
 Route::get('/adminmail/new','MailController@render_new');
 Route::get('/users/new','MailController@render_new');
