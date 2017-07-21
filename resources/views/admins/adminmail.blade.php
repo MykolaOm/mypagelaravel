@@ -10,18 +10,18 @@
                     <td>title</td>
                     <td>text</td>
                     <td>status</td>
-                    <td>action</td>
+                    {{--<td>action</td>--}}
                 </tr>
-                {{--@foreach($mails as $mail)--}}
-                {{--<tr class="info">--}}
-                    {{--<td>{{$mail->id}}</td>--}}
-                    {{--<td>{{$mail->userid}}</td>--}}
-                    {{--<td>{{$mail->title}}</td>--}}
-                    {{--<td>{{$mail->text}}</td>--}}
-                    {{--<td>{{$mail->status}}</td>--}}
+                @foreach($mails as $mail)
+                <tr class="info">
+                    <td>{{$mail->id}}</td>
+                    <td>{{$mail->user_id}}</td>
+                    <td>{{$mail->title}}</td>
+                    <td>{{$mail->text}}</td>
+                    <td>{{$mail->status}}</td>
                     {{--<td>{{destroy}}</td>--}}
-                {{--</tr>--}}
-                {{--@endforeach--}}
+                </tr>
+                @endforeach
             </table>
 
 

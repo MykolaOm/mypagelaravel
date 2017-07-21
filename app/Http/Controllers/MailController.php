@@ -100,7 +100,7 @@ class MailController extends Controller
     {
         //
         $mails = DB::table('mails')->where('id', $id);
-
+        //->get()
         return view('mails.show', compact('mails'));
     }
 

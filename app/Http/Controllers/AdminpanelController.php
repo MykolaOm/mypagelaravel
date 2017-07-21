@@ -48,4 +48,17 @@ class AdminpanelController extends Controller
 
         return view('admins.directuser', compact('mails'));
     }
+
+    public function create()
+    {
+        //
+        return view('mails.create');
+    }
+    public function show()
+    {
+        //
+        $mails = DB::table('mails')->get();
+//        ->where('id', $id)
+        return view('admins.adminmail', compact('mails'));
+    }
 }

@@ -8,7 +8,7 @@
 
                             <div class="panel-body">
                                 <div >
-                                    <form method="get" action="home/render_all">
+                                    <form method="get" action="adminmail">
                                         <button class="btn btn-success" type="submit">Show all</button>
                                     </form>
                                     <hr>
@@ -19,10 +19,10 @@
                                     <form method="get" action="home/new">
                                         <button class="btn btn-success" type="submit">Answered</button>
                                     </form>
-                                    <hr>
-                                    <form method="get" action="home/current">
-                                        <button class="btn btn-success" type="submit">My messages</button>
-                                    </form>
+                                    {{--<hr>--}}
+                                    {{--<form method="get" action="home/current">--}}
+                                        {{--<button class="btn btn-success" type="submit">My messages</button>--}}
+                                    {{--</form>--}}
                                     <hr>
                                     <form method="get" action="mail/create">
                                         <button class="btn btn-primary" type="submit">create message</button>
