@@ -113,6 +113,8 @@ class MailController extends Controller
     public function edit($id)
     {
         //
+        $mails = Mail::find($id);
+        return view('mails.edit',compact('mails'));
     }
 
     /**
@@ -125,6 +127,12 @@ class MailController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //$mail = DB::table('mails')->where('id', $id);m
+        $mail = Mail::find($id);
+        $mail->title = $request->get('title');
+        $mail->text = $request->get('text');
+        $mail->save();
+        return redirect('welcome');
     }
 
     /**
@@ -136,5 +144,9 @@ class MailController extends Controller
     public function destroy($id)
     {
         //
+        $mails = Mail::find($id);
+        $mails->delete();
+
+        return redirect('welcome');
     }
 }

@@ -15,6 +15,8 @@
                                 <td>authorid</td>
                                 <td>title</td>
                                 <td>text</td>
+                                <td>actionop</td>
+
                             </tr>
                             @foreach($mails as $mail)
                             <tr class="info">
@@ -22,6 +24,9 @@
                                 <td>{{$mail->user_id}}</td>
                                 <td>{{$mail->title}}</td>
                                 <td>{{$mail->text}}</td>
+                                <form method="post" action="mail/create">
+                                    <button class="btn btn-primary" type="submit">create message</button>
+                                </form>
                             </tr>
                             @endforeach
                         </table>

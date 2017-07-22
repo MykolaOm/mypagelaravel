@@ -20,8 +20,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
 Route::get('adminpanel/render_all','AdminpanelController@render_all');
+//Route::post('adminpanel/render_all','AdminpanelController@render_all');
 
 Route::get('adminpanel/current/{id}','AdminpanelController@current');
+Route::post('adminpanel/current/{id}','AdminpanelController@delete');
 
 Route::get('adminpanel/allusers','AdminpanelController@selectuser');
 
@@ -30,6 +32,12 @@ Route::get('adminpanel/adminmail','AdminpanelController@show');
 Route::get('/adminmail/new','MailController@render_new');
 Route::get('/users/new','MailController@render_new');
 Route::get('/adminmail/old','MailController@render_old');
+
+
+Route::get('/ooooooo', function () {
+    return view('users.mailsent');
+});
+
 
 Route::resource('mail','MailController');
 Route::get('home/render_all','MailController@render_all');

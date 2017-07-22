@@ -27,7 +27,13 @@
 
                     <td> <form method="get" action="/mypage/public/index.php/adminpanel/current/{{$number++}}">
                             <button class="btn btn-success" type="submit">view user messages</button>
-                        </form></td>
+                        </form>
+
+
+                    </td>
+                    {{--<td>--}}
+
+                    {{--</td>--}}
                     @endforeach
 
 

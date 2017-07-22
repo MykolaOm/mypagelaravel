@@ -15,6 +15,7 @@
                                 <td>authorid</td>
                                 <td>title</td>
                                 <td>text</td>
+                                <td>action</td>
                             </tr>
                             @foreach($mails as $mail)
                             <tr class="info">
@@ -22,7 +23,13 @@
                             <td>{{$mail->user_id}}</td>
                             <td>{{$mail->title}}</td>
                             <td>{{$mail->text}}</td>
-
+                        {{--<td>--}}
+                            {{--<form action="{{action('MailController@destroy', $post['id'])}}" method="POST">--}}
+                                {{--{{csrf_field()}}--}}
+                                {{--<input name="_method" type="hidden" value="DELETE">--}}
+                                {{--<button class="btn btn-danger" type="submit">Delete</button>--}}
+                            {{--</form>--}}
+                        {{--</td>--}}
 
                             </tr>
                             @endforeach

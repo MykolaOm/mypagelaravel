@@ -1,3 +1,6 @@
+{{--<script src="https://cdn.ckeditor.com/4.3.5/basic/ckeditor.js"></script>--}}
+{{--<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>--}}
+{{--<script type="text/javascript" src="/ckeditor/adapters/jquery.js"></script>--}}
 @extends('layouts.app')
 @if (Auth::check())
 
@@ -68,6 +71,17 @@
                                     </div>
                                 </form>
 
+                                {{--<script>--}}
+{{--//                                $( 'textarea.form-control' ).ckeditor();--}}
+                                    {{--CKEDITOR.replace( 'mailmessage' );--}}
+                                    {{--$( '.section-x' )--}}
+                                        {{--.find( 'textarea.editor' )--}}
+                                        {{--.ckeditor()--}}
+                                        {{--.end()--}}
+                                        {{--.find( 'a' )--}}
+                                        {{--.addClass( 'mylink' )--}}
+                                        {{--.end();--}}
+                                {{--</script>--}}
                             </div>
 
 
