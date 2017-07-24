@@ -6,8 +6,6 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Mail table</div>
 
-<!--                    --><?php // // $curentUserId = Auth::user()->id;
-//                    // $mails = DB::table('mails')->(where('user_id','$currentUserId'))->get(); ?>
                     <div class="panel-body">
                         <table class="table table-striped">
                             <tr class="success">

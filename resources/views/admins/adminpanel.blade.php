@@ -28,21 +28,7 @@
                                         <button class="btn btn-primary" type="submit">create message</button>
                                     </form>
 
-                                    {{--<form class="form-horizontal" method="get" action="{{ url('adminpanel/current/id }}">--}}
-                                    {{--<div class="form-group">--}}
-                                        {{--{{csrf_field()}}--}}
-                                        {{--<label for="name" class="col-sm-2 control-label">Enter user id</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input type="text" class="form-control" id="useridd" name="userid" placeholder="choose number" value="">--}}
-                                        {{--</div>--}}
 
-                                    {{--</div>--}}
-                                        {{--<div class="form-group">--}}
-                                            {{--<div class="col-sm-10 col-sm-offset-2">--}}
-                                                {{--<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</form>--}}
                                 </div>
                             </div>
                         </div>

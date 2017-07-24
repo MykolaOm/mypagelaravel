@@ -24,20 +24,13 @@
                     <form method="get" action="home/new">
                         <button class="btn btn-success" type="submit">Answered</button>
                     </form>
-                        <hr>
-                    <form method="get" action="home/current">
-                        <button class="btn btn-success" type="submit">My messages</button>
-                    </form>
+
                         <hr>
                     <form method="get" action="mail/create">
                         <button class="btn btn-primary" type="submit">create message</button>
                     </form>
                         </div>
-                   {{--<button type="button" formaction="{{ action('MailController@render_all') }}">Click Me!</button>--}}
-                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@render_all') }}"> Все письма</button>--}}
-                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@old') }}">не отвеченые</button>--}}
-                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@new') }}">отвеченые</button>--}}
-                    {{--<button class="btn btn-primary" formaction="{{ action('MailController@current') }}">свои письма</button>--}}
+
                 </div>
             </div>
         </div>

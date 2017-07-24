@@ -81,6 +81,11 @@
                                         <a href="{{ url('/adminpanel')}}">
                                             Back to panel
                                         </a>
+                                        @else
+                                            <a href="{{ url('/home')}}">
+                                                Cabinet
+                                            </a>
+
                                         @endif
                                         {{--onclick="event.preventDefault();--}}
                                         {{--document.getElementById('logout-form').submit();"--}}

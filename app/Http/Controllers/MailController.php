@@ -71,10 +71,15 @@ class MailController extends Controller
         //dump($request);
        //dd(request()->all());
        // $user_id = Auth::user()->id;
+//        $this->validate(request(),[
+//            'title' =>  'required|min:3',
+//            'text'  =>  'required|max:50'
+//            ]);
+
         $mail = new Mail([
-        'title' => $request->get('mailtitle'),
-        'text' => $request->get('mailmessage'),
-        'user_id' => Auth::user()->id
+            'title' => $request->get('mailtitle'),
+            'text' => $request->get('mailmessage'),
+            'user_id' => Auth::user()->id
         ]);
 //        dd($mail);
         $mail->save();

@@ -13,12 +13,9 @@
                 <tr class="success">
                     <td>id</td>
                     <td>user name</td>
-                    {{--<td>user email</td>--}}
-                    {{--<td>registration date</td>--}}
+
                     <td>action</td>
-                    {{--<td> <form method="get" action="/mypage/public/index.php/adminpanel/current/{{$number++}}">--}}
-                            {{--<button class="btn btn-success" type="submit">My messages</button>--}}
-                        {{--</form></td>--}}
+
                 </tr>
                 @foreach($users as $user)
                 <tr class="info">
