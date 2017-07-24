@@ -10,10 +10,12 @@
 * admin can look user mails by selecting this user from users list
 * make inc(include folder) for oftenly repeated code(cut text and include it from single file).
 * update Users Cabinet.
+* connect many answers to question
+
 ***
 ---------
-
+*try to give user option to close question*
 *working on content modify.*
 -------
-### new step to send email notifications 
+### next step to send email notifications and confirmation
 
