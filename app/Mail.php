@@ -8,4 +8,9 @@ class Mail extends Model
 {
     //
     protected $fillable = ['title','text','user_id'];
+
+    public function answers(){
+        return $this->hasMany(Answer::class);
+    //'App\Answer'
+    }
 }

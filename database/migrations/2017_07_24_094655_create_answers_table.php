@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePivotTable extends Migration
+class CreateAnswersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('pivot', function (Blueprint $table) {
-            $table->integer('role_id');
-            $table->integer('user_id');
+        Schema::create('answers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->tinyInteger('mail_id');
+            $table->text('text');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreatePivotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pivot');
+        Schema::dropIfExists('answers');
     }
 }

@@ -84,4 +84,21 @@ class AdminpanelController extends Controller
 
         return view('admins.allusers', compact('users'));
     }
+
+    public function createanswer(){
+
+        return view ('admins.createanswer');
+    }
+    public function store(Request $request,$mail_id)
+    {
+        $current_mail = $mail_id;
+        $answer = new Answer([
+            'text' => $request->get('mailmessage'),
+            'mail_id' => $current_mail;
+        ]);
+
+        $answer->save();
+        return redirect('home');
+
+    }
 }
