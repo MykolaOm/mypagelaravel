@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     //
-    protected $fillable = ['text'];
+    protected $fillable = ['text','mail_id'];
 
     public function mail(){
 

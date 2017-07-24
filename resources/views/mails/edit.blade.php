@@ -144,5 +144,66 @@ garbage storage
 {{--</div>--}}
 {{--</div>--}}
 {{--</form>--}}
+
+
+
+//Route::get('adminpanel/{id}',function($id) {
+//   // dd($user_id);
+//    $mail = DB::table('mails')->where('user_id',$id)->get();
+//    return view('admins.adminmail',compact('mail'));
+//});
+
+//Route::get('/adminmail', function () {
+//
+//    return view('admins.adminmail');
+//});
+
+
+
+//Route::get('/mail/create', 'MailController@create');
+//Route::get('/mail', 'MailController@show');//
+//Route::get('/mail/{id}/edit', 'MailController@edit');//???
+//Route::patch('/mail/{id}', 'MailController@edit');//?????
+//Route::get('/mail/{id}', 'MailController@show');//?????
+//Route::delete('/mail/{id}', 'MailController@delete');//?????
+//Route::post('/mail/create', 'MailController@store');
+
+//Route::get('/mailsent', 'MailController@show');
+/*
+
+Route::get('/adminmail',function () {
+$mails = DB::table('mails')->get();
+
+return view('admins.adminmail',compact('mails'));
+});
+Route::get('/home/{userid}',function ($userid) {
+$mails = DB::table('mails')->find($userid);
+
+return view('home',compact('mails'));
+});
+ *
+ *
+ *
+ *
+ *
+ *                        <hr>
+{{--<!--                        --><?php //dd($mails)?>--}}
+{{--@foreach($mails->answers as $answers)--}}
+{{--<p>{{$answers}}</p>--}}
+{{--@endforeach--}}
+<hr>
+ *
+ *
+ *
+ *
+ *
+ *        {{--<input list="browsers">--}}
+{{--<datalist id="browsers">--}}
+{{--<option value="Internet Explorer">--}}
+{{--<option value="Firefox">--}}
+{{--<option value="Chrome">--}}
+{{--<option value="Opera">--}}
+{{--<option value="Safari">--}}
+{{--</datalist>--}}
  */
 

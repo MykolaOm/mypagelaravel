@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail;
 use DB;
+use App\Answer;
 
 class MailController extends Controller
 {
@@ -135,5 +136,9 @@ class MailController extends Controller
         $mails->delete();
 
         return redirect('welcome');
+    }
+    public function show_mail_answer(){
+        $mails= Mail::all();
+        return view('users.mailsent',compact('mails'));
     }
 }

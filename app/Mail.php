@@ -11,6 +11,6 @@ class Mail extends Model
 
     public function answers(){
         return $this->hasMany(Answer::class);
-    //'App\Answer'
+
     }
 }

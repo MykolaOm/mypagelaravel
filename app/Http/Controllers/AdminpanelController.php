@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail;
+
 use DB;
 use App\User;
-////use App\Admin;
+use App\Answer;
 
 
 class AdminpanelController extends Controller
@@ -87,18 +88,29 @@ class AdminpanelController extends Controller
 
     public function createanswer(){
 
-        return view ('admins.createanswer');
+//    $mails = DB::table('mails');
+//        $user = DB::table('users');
+//
+//        ,compact('mails')
+        return view ('mails.answer');
     }
-    public function store(Request $request,$mail_id)
+    public function store(Request $request)
     {
-        $current_mail = $mail_id;
+//        mail_id =>DB::mails->id
+
         $answer = new Answer([
-            'text' => $request->get('mailmessage'),
-            'mail_id' => $current_mail;
+            'text' => $request->get('answermessage'),
+            'mail_id' => $request->get('mail_id')
         ]);
 
         $answer->save();
+
+//       Mail::find($id)[
+//       'status' = 1
+//           ]
+
         return redirect('home');
 
     }
+
 }
