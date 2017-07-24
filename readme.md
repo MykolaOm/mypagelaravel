@@ -7,7 +7,13 @@
 * mail views by id, or status or all answered, unanswered or just all msgs;
 * exeption 404 for nonExistant pages;
 * admins menu to look at all users, messages;
-* admin can look user mails by selecting this user from users list;
-#### working on content modify.
+* admin can look user mails by selecting this user from users list
+* make inc(include folder) for oftenly repeated code(cut text and include it from single file).
+* update Users Cabinet.
+***
+---------
+
+*working on content modify.*
 -------
-##### new step to send email notifications 
+### new step to send email notifications 
+
