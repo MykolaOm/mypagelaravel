@@ -9,6 +9,7 @@ use DB;
 use App\Answer;
 use App\Mail\Welcome;
 use App\Mail\Notify;
+use App\Mail\CreationMessage;
 
 class MailController extends Controller
 {
@@ -77,7 +78,7 @@ class MailController extends Controller
 
         $mail->save();
         $adress = Auth::user()->email;
-        \Mail::to($adress)->send(new Notify());
+        \Mail::to($adress)->send(new CreationMessage());
         return redirect('home');
 
     }
