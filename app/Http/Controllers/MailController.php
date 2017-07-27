@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail;
 use DB;
 use App\Answer;
+use App\Mail\Welcome;
+use App\Mail\Notify;
 
 class MailController extends Controller
 {
@@ -74,6 +76,8 @@ class MailController extends Controller
         ]);
 
         $mail->save();
+        $adress = Auth::user()->email;
+        \Mail::to($adress)->send(new Notify());
         return redirect('home');
 
     }

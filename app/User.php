@@ -23,6 +23,10 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
+    public function mails()
+    {
+        return $this->hasMany('App\Mail');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

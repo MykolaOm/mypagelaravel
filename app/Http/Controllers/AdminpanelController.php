@@ -9,7 +9,7 @@ use App\Mail;
 use DB;
 use App\User;
 use App\Answer;
-
+use App\Mail\Notify;
 
 class AdminpanelController extends Controller
 {
@@ -104,7 +104,17 @@ class AdminpanelController extends Controller
         ]);
 
         $answer->save();
+        $m_id = $answer->mail_id;
 
+        $current_mail = Mail::find($m_id);
+        $user_id = $current_mail->user_id;
+
+        $nitify_to = DB::table('users')->where('id', $user_id)->first()->email;;
+
+//        $adress = $nitify_to->email;
+
+        \Mail::to($nitify_to)->send(new Notify());
+        return redirect('home');
 //       Mail::find($id)[
 //       'status' = 1
 //           ]

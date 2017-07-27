@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
-<?php //$isAdminName = Auth::user()->name == 'admin' $isAdminName ?>
-@if(1)
+<?php $isAdminName = Auth::user()->name == 'admin'  ?>
+@if($isAdminName)
 
     @section('content')
         <div class="container">

@@ -11,11 +11,12 @@
 * make inc(include folder) for oftenly repeated code(cut text and include it from single file).
 * update Users Cabinet.
 * connect many answers to question
-
+* notification to email when you have answer
+* welcome mail after registration
 ***
 ---------
 *try to give user option to close question*
 *working on content modify.*
 -------
-### next step to send email notifications and confirmation
-
+### next step to send email notifications and confirmation -- DONE
+### next step to confirm registration by code - IN PROGRESS
