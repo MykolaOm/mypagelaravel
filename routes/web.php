@@ -36,11 +36,12 @@ Route::get('/op','AdminpanelController@createanswer');
 Route::post('/op','AdminpanelController@store');
 
 
-Route::get('/ooooooo', 'MailController@show_mail_answer' );
+Route::get('/allanswered', 'MailController@show_mail_answer' );
+Route::get('home/answered', 'MailController@show_mail_answer_current' );
 
 Route::resource('mail','MailController');
 Route::get('home/render_all','MailController@render_all');
 Route::get('home/old','MailController@old');
-Route::get('home/new','MailController@new');
+//Route::get('home/new','MailController@new');
 Route::get('home/current','MailController@current');
 

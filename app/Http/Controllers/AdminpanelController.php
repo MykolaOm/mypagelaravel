@@ -10,6 +10,7 @@ use DB;
 use App\User;
 use App\Answer;
 use App\Mail\Notify;
+use App\Mail\Markd;
 
 class AdminpanelController extends Controller
 {
@@ -114,10 +115,12 @@ class AdminpanelController extends Controller
 //        $adress = $nitify_to->email;
 
         \Mail::to($nitify_to)->send(new Notify());
+        \Mail::to($nitify_to)->send(new Markd()gir);
         return redirect('home');
 //       Mail::find($id)[
 //       'status' = 1
 //           ]
+
 
         return redirect('home');
 

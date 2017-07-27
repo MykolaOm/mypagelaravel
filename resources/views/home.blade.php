@@ -21,7 +21,7 @@
                         <button class="btn btn-success" type="submit">Unanswered</button>
                     </form>
                         <hr>
-                    <form method="get" action="home/new">
+                    <form method="get" action="home/answered">
                         <button class="btn btn-success" type="submit">Answered</button>
                     </form>
 

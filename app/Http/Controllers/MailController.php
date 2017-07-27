@@ -142,8 +142,17 @@ class MailController extends Controller
 
         return redirect('welcome');
     }
+
     public function show_mail_answer(){
+
         $mails= Mail::all();
+        return view('users.mailsent',compact('mails'));
+    }
+    public function show_mail_answer_current(){
+
+        $my_id = Auth::user()->id;
+        $allmails= Mail::all();
+        $mails = $allmails->where('user_id',$my_id);
         return view('users.mailsent',compact('mails'));
     }
 }
