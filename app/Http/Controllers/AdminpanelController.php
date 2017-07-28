@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contentcv;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail;
@@ -110,12 +111,12 @@ class AdminpanelController extends Controller
         $current_mail = Mail::find($m_id);
         $user_id = $current_mail->user_id;
 
-        $nitify_to = DB::table('users')->where('id', $user_id)->first()->email;;
+        $notify_to = DB::table('users')->where('id', $user_id)->first()->email;
 
 //        $adress = $nitify_to->email;
 
-        \Mail::to($nitify_to)->send(new Notify());
-        \Mail::to($nitify_to)->send(new Markd()gir);
+        \Mail::to($notify_to)->send(new Notify());
+        \Mail::to($notify_to)->send(new Markd());
         return redirect('home');
 //       Mail::find($id)[
 //       'status' = 1
@@ -125,5 +126,75 @@ class AdminpanelController extends Controller
         return redirect('home');
 
     }
+    public function createcv()
+    {
+        //
+        return view('admins.editpage');
+    }
+    public function storecv(Request $request)
+    {
+//        mail_id =>DB::mails->id
 
+        $contentcv = new Contentcv([
+            'link' => $request->get('link'),
+            'advanced' => $request->get('advanced'),
+            'basic' => $request->get('basic'),
+            'addition' => $request->get('addition')
+        ]);
+
+        $contentcv->save();
+
+
+
+        return redirect('resume');
+
+    }
+    public function show_content(){
+
+        $contentcv= Contentcv::first();
+        return view('layouts.resume',compact('contentcv'));
+    }
+
+    public function editcv()
+    {
+        //
+        return view('admins.editpageto');
+    }
+    public function updatecv(Request $request)
+    {
+        //
+
+//        Contentcv::first()->update(['link' => $request->get('link')],
+//           ['advanced' => $request->get('advanced')],
+//           ['basic' => $request->get('basic')],
+//           ['addition' => $request->get('adition')]
+//        );
+
+//        $contentcv->link = $request->get('link');
+//        $contentcv->advanced = $request->get('advanced');
+//        $contentcv->basic = $request->get('basic');
+//        $contentcv->addition = $request->get('adition');
+
+///
+///
+         $contentcv = Contentcv::first();
+//        if($request->get('link') != NULL){
+        $contentcv->link = $request->get('link');
+
+//        }
+//        if($request->get('advanced')!= NULL){
+        $contentcv->advanced = $request->get('advanced');
+
+//        }
+//        if($request->get('basic')!= NULL){
+        $contentcv->basic = $request->get('basic');
+//        }
+//        if($request->get('adition')!= NULL){
+        $contentcv->addition = $request->get('addition');
+//        }
+        $contentcv->update();
+//        $contentcv->save();
+
+        return redirect('resume');
+    }
 }

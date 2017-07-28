@@ -99,17 +99,24 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Cool Page
+                <div class="row">
+                <div class="title m-b-md">
+                <div class="title m-b-md">
+
+                    Hello, make choise to visit
+
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="index.php/resume">CV</a>
+                    <a href="http://gitlab.intita.com/b16/Project2119/tree/issue__2124/">Project folder</a>
+                    <a href="https://www.facebook.com/profile.php?id=100003144621147">Facebook</a>
+                    <a href="https://www.linkedin.com/in/mykola-omelianov-19bba9130/">LinkedIn</a>
+                    <a href="https://github.com/MykolaOm">GitHub</a>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </body>
 </html>

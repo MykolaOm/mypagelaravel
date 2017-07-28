@@ -16,16 +16,28 @@
                                         <button class="btn btn-success" type="submit">Unanswered</button>
                                     </form>
                                     <hr>
-                                    <form method="get" action="home/new">
-                                        <button class="btn btn-success" type="submit">Answered</button>
+                                    {{--<form method="get" action="home/new">--}}
+                                        {{--<button class="btn btn-success" type="submit">Answered</button>--}}
+                                    {{--</form>--}}
+                                    {{--<hr>--}}
+                                    <form method="get" action="adminpanel/allusers">
+                                        <button class="btn btn-default" type="submit">Select messages</button>
                                     </form>
                                     <hr>
-                                    <form method="get" action="adminpanel/allusers">
-                                        <button class="btn btn-success" type="submit">Select messages</button>
+                                    {{--<form method="get" action="cv">--}}
+                                        {{--<button class="btn btn-success" type="submit">Create content</button>--}}
+                                    {{--</form>--}}
+                                    {{--<hr>--}}
+                                    <form method="get" action="cv/edit">
+                                        <button class="btn btn-success" type="submit">Edit content</button>
+                                    </form>
+                                    <hr>
+                                    <form method="get" action="op">
+                                        <button class="btn btn-primary" type="submit">Answer to user</button>
                                     </form>
                                     <hr>
                                     <form method="get" action="mail/create">
-                                        <button class="btn btn-primary" type="submit">create message</button>
+                                        <button class="btn btn-primary" type="submit">Create message</button>
                                     </form>
 
 

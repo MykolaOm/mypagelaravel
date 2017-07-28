@@ -13,10 +13,6 @@
 * connect many answers to question
 * notification to email when you have answer
 * welcome mail after registration
-***
----------
-*try to give user option to close question*
-*working on content modify.*
--------
-### next step to send email notifications and confirmation -- DONE
-### next step to confirm registration by code - IN PROGRESS
+* content modify.
+
+'working on - user option to close question'

@@ -14,11 +14,16 @@ use App\Http\Controllers\MailController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//Route::get('/resume', function ($contentcv) {
+//    return view('layouts.resume', compact('contentcv'));
+//});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');
+
+Route::get('resume', 'AdminpanelController@show_content');
+
 Route::get('adminpanel/render_all','AdminpanelController@render_all');
 //Route::post('adminpanel/render_all','AdminpanelController@render_all');
 
@@ -34,6 +39,13 @@ Route::get('/users/new','MailController@render_new');
 Route::get('/adminmail/old','MailController@render_old');
 Route::get('/op','AdminpanelController@createanswer');
 Route::post('/op','AdminpanelController@store');
+Route::post('/cv','AdminpanelController@storecv');
+Route::get('/cv','AdminpanelController@createcv');
+//------------------------------------------------------------------------
+Route::get('/cv/edit','AdminpanelController@editcv');
+
+Route::post('/cv/edit','AdminpanelController@updatecv');
+//------------------------------------------------------------------------
 
 
 Route::get('/allanswered', 'MailController@show_mail_answer' );
