@@ -28,6 +28,9 @@
                                         {{--<button class="btn btn-success" type="submit">Create content</button>--}}
                                     {{--</form>--}}
                                     {{--<hr>--}}
+                                    <form method="get" action="cv">
+                                        <button class="btn btn-success" type="submit">Create content</button>
+                                    </form>
                                     <form method="get" action="cv/edit">
                                         <button class="btn btn-success" type="submit">Edit content</button>
                                     </form>

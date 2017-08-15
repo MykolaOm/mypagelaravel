@@ -45,7 +45,9 @@ Route::get('/cv','AdminpanelController@createcv');
 Route::get('/cv/edit','AdminpanelController@editcv');
 Route::post('/cv/edit','AdminpanelController@updatecv');
 //------------------------------------------------------------------------
-
+Route::get('/profile', 'ContentController@profile');
+Route::post('/profile', 'ContentController@update_avatar');
+//--------------------------------------------------------------------
 
 Route::get('/allanswered', 'MailController@show_mail_answer' );
 Route::get('home/answered', 'MailController@show_mail_answer_current' );

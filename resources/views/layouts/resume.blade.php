@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
-                                {{dd($contentcv)}}
+                                <img class="img-responsive menu-thumbnails" src="{{ asset("/uploads/avatars/adminava.jpg") }}" style="border-radius: 50%">
                                 {{--<img id="adminfoto" src="{{$contentcv->link}}" alt="">--}}
                                 {{--<img id="adminfoto" src="/uploads/photos/{{$images->photo}}" alt="" style="border-radius: 50%">--}}
                                 {{--<img id="adminfoto" src="/uploads/photos/{{$contentcv->link}}" alt="" style="border-radius: 50%">--}}

@@ -25,6 +25,6 @@ class UsersTableSeeder extends Seeder
             'email' => str_random(10).'@gmail.com',
             'password' => bcrypt('secret'),
         ]);
-    }
+        }
     }
 }
