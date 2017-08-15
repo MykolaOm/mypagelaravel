@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail;
 
+use \database\seeds\DatabaseSeeder;
+
 use DB;
 use App\User;
 use App\Answer;
@@ -152,6 +154,8 @@ class AdminpanelController extends Controller
     public function show_content(){
 
         $contentcv= Contentcv::first();
+        $contentcv->link = DB::table('images')->first()->photo;
+//        dd($contentcv);
         return view('layouts.resume',compact('contentcv'));
     }
 
@@ -197,4 +201,9 @@ class AdminpanelController extends Controller
 
         return redirect('resume');
     }
+    public function firstrun()
+    {
+        \DatabaseSeeder::run();
+    }
+
 }

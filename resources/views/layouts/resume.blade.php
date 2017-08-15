@@ -10,7 +10,10 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <img id="adminfoto" src="{{$contentcv->link}}" alt="">
+                                {{dd($contentcv)}}
+                                {{--<img id="adminfoto" src="{{$contentcv->link}}" alt="">--}}
+                                {{--<img id="adminfoto" src="/uploads/photos/{{$images->photo}}" alt="" style="border-radius: 50%">--}}
+                                {{--<img id="adminfoto" src="/uploads/photos/{{$contentcv->link}}" alt="" style="border-radius: 50%">--}}
                             </div>
                             <div class="col-md-6">
                                 <dl>

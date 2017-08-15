@@ -43,7 +43,6 @@ Route::post('/cv','AdminpanelController@storecv');
 Route::get('/cv','AdminpanelController@createcv');
 //------------------------------------------------------------------------
 Route::get('/cv/edit','AdminpanelController@editcv');
-
 Route::post('/cv/edit','AdminpanelController@updatecv');
 //------------------------------------------------------------------------
 
