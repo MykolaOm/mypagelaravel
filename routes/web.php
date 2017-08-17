@@ -14,6 +14,10 @@ use App\Http\Controllers\MailController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/ck', function () {
+    return view('ck');
+});
+
 //Route::get('/resume', function ($contentcv) {
 //    return view('layouts.resume', compact('contentcv'));
 //});
