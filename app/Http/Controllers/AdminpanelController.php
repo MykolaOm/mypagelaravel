@@ -20,7 +20,6 @@ class AdminpanelController extends Controller
 {
     //
 
-
     public function index()
     {
 //        $isAdminName = Auth::user()->name == 'admin';

@@ -1,5 +1,6 @@
 @extends('layouts.app')
-{!! Html::script('js/jquery.min.js') !!}
+
+
 @section('content')
     <div class="container spark-screen">
         <div class="row">
@@ -8,13 +9,20 @@
                     <div class="panel-heading">Dashboard</div>
 
                     <div class="panel-body">
-                        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+                        <textarea id="my-editor" name="content" class="form-control">{!! old('content', 'test editor content') !!}</textarea>
                         <script>
-                            CKEDITOR.replace( 'article-ckeditor' );
+                        CKEDITOR.replace('editor', {
+                        filebrowserImageBrowseUrl: '/ck?type=Images',
+                        filebrowserBrowseUrl: '/ck?type=Files'
+                        });
+                        </script>
+                        <script>
+                            CKEDITOR.replace('my-editor', options);
                         </script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 @endsection
