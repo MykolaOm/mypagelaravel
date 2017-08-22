@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
         if(!(DB::table('users')->first()->name)){
         DB::table('users')->insert([
             'name' => 'admin',
