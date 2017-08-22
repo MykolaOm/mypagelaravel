@@ -10,6 +10,9 @@ use App\Http\Controllers\MailController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('user/activation/{token}', 'Auth\AuthController@userActivation');
+
+Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/', function () {
     return view('welcome');

@@ -13,10 +13,10 @@ class ImagesTableSeeder extends Seeder
     {
         //
 
-        if (!(DB::table('images')->first()->photo)){
+//        if (!(DB::table('images')->first()->photo)){
             DB::table('images')->insert([
-                'photo' => 'defaulf.jpg',
+                'photo' => 'default.jpg',
             ]);
-        }
+//        }
     }
 }

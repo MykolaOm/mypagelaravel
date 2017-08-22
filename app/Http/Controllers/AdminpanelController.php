@@ -154,7 +154,7 @@ class AdminpanelController extends Controller
     public function show_content(){
 
         $contentcv= Contentcv::first();
-        $contentcv->link = DB::table('contentcvs')->first()->link;
+       // $contentcv->link = DB::table('contentcvs')->first()->link;
 //        dd($contentcv);
         return view('layouts.resume',compact('contentcv'));
     }
