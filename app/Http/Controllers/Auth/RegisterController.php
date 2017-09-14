@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+
 use DB;
 use Mail;
 use App\Mail\Welcome;

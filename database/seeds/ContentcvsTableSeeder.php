@@ -16,7 +16,7 @@ class ContentcvsTableSeeder extends Seeder
         DB::table('contentcvs')->insert([
             'link' => 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAsxAAAAJGJmMGUwNWEyLWQ2ZmEtNDg5Yy1hZDQ0LWY1MmM0MGQ3MmY3Yw.jpg',
             'advanced' => 'PHP,JavaScript,HTML,CSS',
-            'basic' => 'C,Python,MySQL',
+            'basic' => 'C,Python,MySQL, Swift',
             'addition' => 'Git,redmine, MarkDown',
         ]);
     }
